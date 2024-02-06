@@ -1,0 +1,42 @@
+ /* 
+ Customize Firefox Reader
+ https://www.hongkiat.com/blog/customize-reader-view-theme-firefox/ 
+ ./Firefox/profiles/xyz-abc/chrome/userContent.css
+ about:support -> open profile folder
+ about:config -> toolkit.legacyUserProfileCustomizations.stylesheets
+*/
+@-moz-document url-prefix("about:reader?") {
+   body.dark    {
+    color:#a0d2eb !important;
+    background-color:#12343b !important;
+    text-align: justify!important;
+  }
+   body.dark a   {
+    color:silver !important;
+  }
+  body.light {
+  }
+  body.sepia {
+    /* color: #5B4636 !important; */
+  }
+  body.serif {
+    font-family: serif !important;
+  }
+  body.sans-serif {
+    font-family: sans-serif !important;
+  }
+  body.dark pre, body.sepia pre{
+    border: 1px solid silver !important;
+    margin: 10px !important;
+    padding: 10px !important;
+  }
+  *::selection{
+    color:white !important; 
+    background-color: black !important;
+  }
+  /* #moz-reader-content { */
+    /* text-align: justify!important; */
+  /* } */
+}
+/* applicable to all web browsing */
+body{opacity:90%!important;}
